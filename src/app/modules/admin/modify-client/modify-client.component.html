@@ -1,0 +1,110 @@
+<div class="container">
+
+  <div class="p-fluid grid">
+
+    <form class="col-12 mt-3" [formGroup]="formGroupSearch" (submit)="searchClient()">
+      <p-card>
+        <p class="fs-4 text-uppercase">Modificar datos <span class="text-orange">de cliente</span> </p>
+        <p class="fs-6 text-uppercase">Buscar cliente</p>
+
+        <div class="grid py-4">
+          <div class="col-4 ">
+            <span class="p-float-label">
+              <input pInputText id="documetoId" formControlName="id_documento" />
+              <label htmlFor="documetoId">D.N.I | N.I.E</label>
+            </span>
+            <small *ngIf="isValid('id_documento', formGroupSearch)">{{ getMensaje('id_documento', formGroupSearch)
+              }}</small>
+            <small *ngIf="!isExist">Cliente no encontrado</small>
+          </div>
+
+          <div class="md:col-4 lg:col-2 ms-3">
+            <button type="submit" pButton pRipple label="Buscar" icon="pi pi-search" class="btn-orange"></button>
+          </div>
+        </div>
+      </p-card>
+    </form>
+
+    <form class="col-12" [formGroup]="formGroupClient" (submit)="modifyClient()">
+      <p-card class="col-12">
+        <div class="grid">
+          <div class="lg:col-12">
+            <p class="fs-6 text-uppercase">Datos personales</p>
+          </div>
+
+          <div class="lg:col-4 md:col-12 py-4">
+            <span class="p-float-label">
+              <input pInputText id="nombre" formControlName="nombre" />
+              <label htmlFor="nombre">Nombre</label>
+            </span>
+            <small *ngIf="isValid('nombre', formGroupClient)">{{ getMensaje('nombre', formGroupClient) }}</small>
+          </div>
+
+          <div class="lg:col-4 md:col-12 py-4">
+            <span class="p-float-label">
+              <input pInputText id="apellidos" formControlName="apellidos" />
+              <label htmlFor="apellidos">Apellidos</label>
+            </span>
+            <small *ngIf="isValid('apellidos', formGroupClient)">{{ getMensaje('apellidos', formGroupClient) }}</small>
+          </div>
+
+          <div class="lg:col-4 md:col-12 py-4">
+            <span class="p-float-label">
+              <p-inputMask id="fechaNacimiento" mask="99/99/9999" slotChar="dd/mm/yyyy"
+                formControlName="fe_nacimiento"></p-inputMask>
+              <label htmlFor="fechaNacimiento">Fecha de nacimiento</label>
+            </span>
+            <small *ngIf="isValid('fe_nacimiento', formGroupClient)">{{ getMensaje('fe_nacimiento', formGroupClient)
+              }}</small>
+          </div>
+
+          <div class="lg:col-6 md:col-12 py-4">
+            <span class="p-float-label">
+              <p-dropdown (onChange)="updateLabelDocument()" [options]="tiposDocumentos" optionLabel="name"
+                inputid="tipoDocumento" formControlName="tipo_documento"></p-dropdown>
+              <label for="tipoDocumento">Tipo de Documento</label>
+            </span>
+          </div>
+
+          <div class="lg:col-6 md:col-12 py-4">
+            <span class="p-float-label">
+              <p-inputMask *ngIf="documentLabel == 'DNI'" id="identificacion" formControlName="documento"
+                mask="99999999a" slotChar="########L"></p-inputMask>
+              <p-inputMask *ngIf="documentLabel != 'DNI'" id="identificacion" formControlName="documento"
+                mask="a9999999a" slotChar="L#######L"></p-inputMask>
+              <label htmlFor="identificacion">{{ documentLabel }}</label>
+            </span>
+            <small *ngIf="isValid('documento', formGroupClient)">{{ getMensaje('documento', formGroupClient) }}</small>
+          </div>
+        </div>
+
+        <p class="fs-6 text-uppercase mt-4">Datos de contancto</p>
+        <div class="grid">
+
+          <div class="col-6 py-4">
+            <span class="p-float-label">
+              <input pInputText id="email" formControlName="mail" />
+              <label htmlFor="email">Email</label>
+            </span>
+            <small *ngIf="isValid('mail', formGroupClient)">{{ getMensaje('mail', formGroupClient) }}</small>
+          </div>
+
+          <div class="col-6 py-4">
+            <span class="p-float-label">
+              <p-inputMask id="telefono" mask="999-999-999" slotChar="###-###-###"
+                formControlName="telefono"></p-inputMask>
+              <label htmlFor="telefono">Teléfono</label>
+            </span>
+            <small *ngIf="isValid('telefono', formGroupClient)">{{ getMensaje('telefono', formGroupClient) }}</small>
+          </div>
+        </div>
+
+        <div class="md:col-4 lg:col-2">
+          <button type="submit" pButton pRipple label="Guardar" icon="pi pi-save" class="btn-orange"></button>
+        </div>
+
+      </p-card>
+    </form>
+
+  </div>
+</div>

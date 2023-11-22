@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+@import "/node_modules/primeflex/primeflex.css";
+@import "/node_modules/primeicons/primeicons.css";
+
+body {
+  font-size       : 20px;
+  font-family     : -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+.bgBody {
+  background-color: var(--surface-ground);
+}
+
+li div a {
+  text-decoration: none;
+  margin-left    : 1rem;
+}
+
+ul.p-menu-list {
+  padding-left: 0;
+}
+
+li.p-submenu-header {
+  text-transform: uppercase;
+  font-size: 0.857rem;
+}
+
+.layout-main-container {
+  margin-left    : 300px;
+  flex-direction : column;
+  min-height     : 100vh;
+  padding        : 7rem 2rem 3rem 4rem;
+  transition     : margin-left 0.5s;
+}
+
+.text-orange {
+  color: rgb(244, 98, 58);
+}
+
+.btn-orange {
+  background-color: rgb(244, 98, 58);
+  color: white;
+  border-radius: 0.5rem;
+  border: 0;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border-bottom: 0.1px !important;
+  border-style: groove !important;
+}
+
+thead tr th{
+  background-color:  rgb(255, 113, 74);
+  padding: 0.5rem 1rem;
+}
