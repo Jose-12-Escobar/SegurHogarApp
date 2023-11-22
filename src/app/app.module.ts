@@ -21,7 +21,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
 import {MenuModule} from 'primeng/menu';
-
+import { PasswordModule } from 'primeng/password';
 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -56,7 +56,8 @@ import { ModifyClientComponent } from './modules/admin/modify-client/modify-clie
     ButtonModule,
     SidebarModule,
     MenuModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PasswordModule
   ],
   providers: [],
   bootstrap: [AppComponent]

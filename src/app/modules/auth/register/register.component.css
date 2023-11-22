@@ -2,10 +2,7 @@
 
 .padding-top-bottom {
 
-  padding: 9rem 0 10rem 0;
-}
-.o-hidden {
-  overflow: hidden !important;
+  padding: 11rem 0 12rem 0;
 }
 
 .bg-register-image {
@@ -15,55 +12,28 @@
   background-size: cover;
 }
 
-form.user .custom-checkbox.small label {
-  line-height: 1.5rem;
-}
 
 form.user .form-control-user {
-  font-size: 0.8rem;
+  width: 100%;
   border-radius: 10rem;
-  padding: 1.5rem 1rem;
-  height: 3rem;
+  padding: 1rem 1.5rem;
 }
 
-form.user .btn-user {
+form.user .btn-register {
   font-size: 0.8rem;
   border-radius: 10rem;
   padding: 0.75rem 1rem;
-}
-
-.btn-block {
   display: block;
   width: 100%;
-}
-
-.btn-google {
-  color: #fff;
-  background-color: #ea4335;
-  border-color: #fff;
-}
-
-.btn-google:hover {
-  color: #fff;
-  background-color: #e12717;
-  border-color: #e6e6e6;
-}
-
-.btn-facebook {
-  color: #fff;
-  background-color: #3b5998;
-  border-color: #fff;
-}
-
-.btn-facebook:hover {
-  color: #fff;
-  background-color: #30497c;
-  border-color: #e6e6e6;
 }
 
 .small {
   font-size: 80%;
   font-weight: 400;
+}
+
+.padding-div {
+  padding: 1.5rem 0 1.5rem 0;
 }
 
 @media screen and (max-width: 992px) {
