@@ -1,0 +1,136 @@
+<div class="container-fluid">
+
+  <div class="p-fluid grid">
+    <form class="col-12" [formGroup]="formGroup" (ngSubmit)="guardarDatos()">
+
+    <p-card>
+
+      <div class="grid">
+        <div class="lg:col-12">
+          <p class="fs-3 text-uppercase">Creación de <span class="text-orange">nuevo cliente</span> </p>
+          <p class="fs-6 text-uppercase">Datos personales</p>
+        </div>
+
+        <div class="lg:col-4 md:col-12 py-4">
+          <span class="p-float-label">
+            <input pInputText id="nombre" formControlName="nombre"/>
+            <label htmlFor="nombre">Nombre</label>
+          </span>
+          <small  *ngIf="noEsValido('nombre')">{{ getMensaje('nombre') }}</small>
+        </div>
+
+        <div class="lg:col-4 md:col-12 py-4">
+          <span class="p-float-label">
+            <input pInputText id="apellidos" formControlName="apellidos"/>
+            <label htmlFor="apellidos">Apellidos</label>
+          </span>
+          <small  *ngIf="noEsValido('apellidos')">{{ getMensaje('apellidos') }}</small>
+        </div>
+
+        <div class="lg:col-4 md:col-12 py-4">
+          <span class="p-float-label">
+            <p-inputMask id="fechaNacimiento" mask="99/99/9999" slotChar="dd/mm/yyyy" formControlName="fe_nacimiento"></p-inputMask>
+            <label htmlFor="fechaNacimiento">Fecha de nacimiento</label>
+          </span>
+          <small  *ngIf="noEsValido('fe_nacimiento')">{{ getMensaje('fe_nacimiento') }}</small>
+        </div>
+
+        <div class="lg:col-6 md:col-12 py-4">
+          <span class="p-float-label">
+            <p-dropdown (ngModelChange)="updateLabelDocument()" [options]="tiposDocumentos" formControlName="tipo_documento" optionLabel="name" inputid="tipoDocumento" ></p-dropdown>
+            <label for="tipoDocumento">Tipo de Documento</label>
+          </span>
+          <small  *ngIf="noEsValido('tipo_documento')">{{ getMensaje('tipo_documento') }}</small>
+        </div>
+
+        <div class="lg:col-6 md:col-12 py-4">
+          <span class="p-float-label">
+            <p-inputMask *ngIf="documentLabel == 'DNI'" id="identificacion" formControlName="documento" mask="99999999a" slotChar="########L"></p-inputMask>
+            <p-inputMask *ngIf="documentLabel != 'DNI'" id="identificacion" formControlName="documento" mask="a9999999a" slotChar="L########L"></p-inputMask>
+            <label htmlFor="identificacion">{{ documentLabel }}</label>
+          </span>
+        </div>
+      </div>
+
+    </p-card>
+
+    <p-card class="col-12 mt-3">
+      <p class="fs-6 text-uppercase">Datos de contacto</p>
+      <div class="grid">
+
+        <div class="col-6 py-4">
+          <span class="p-float-label">
+            <input pInputText id="email" formControlName="mail"/>
+            <label htmlFor="email">Email</label>
+          </span>
+          <small  *ngIf="noEsValido('mail')">{{ getMensaje('mail') }}</small>
+        </div>
+
+        <div class="col-6 py-4">
+          <span class="p-float-label">
+            <p-inputMask id="telefono" mask="999-999-999" slotChar="###-###-###" formControlName="telefono" ></p-inputMask>
+            <label htmlFor="telefono">Teléfono</label>
+          </span>
+          <small  *ngIf="noEsValido('telefono')">{{ getMensaje('telefono') }}</small>
+        </div>
+      </div>
+    </p-card>
+
+    <p-card class="col-12 mt-3">
+      <p class="fs-6 text-uppercase">Dirección de contacto</p>
+      <div class="grid">
+
+        <div class="lg:col-2 md:col-6 py-4">
+          <span class="p-float-label">
+            <p-dropdown></p-dropdown>
+            <label for="tipoDocumento">Tipo de vía</label>
+          </span>
+        </div>
+
+        <div class="lg:col-2 md:col-6 py-4">
+          <span class="p-float-label">
+            <input pInputText />
+            <label htmlFor="telefono">Dirección</label>
+          </span>
+        </div>
+
+        <div class="lg:col-2 md:col-6 py-4">
+          <span class="p-float-label">
+            <input pInputText pKeyFilter="int" />
+            <label htmlFor="telefono">Número</label>
+          </span>
+        </div>
+
+        <div class="lg:col-2 md:col-6 py-4">
+          <span class="p-float-label">
+            <input pInputText pKeyFilter="int" />
+            <label htmlFor="telefono">Código Postal</label>
+          </span>
+        </div>
+
+        <div class="lg:col-2 md:col-6 py-4">
+          <span class="p-float-label">
+            <p-dropdown></p-dropdown>
+            <label for="tipoDocumento">Localidad</label>
+          </span>
+        </div>
+
+        <div class="lg:col-2 md:col-6 py-4">
+          <span class="p-float-label">
+            <p-dropdown></p-dropdown>
+            <label for="tipoDocumento">Provincia</label>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="md:col-4 lg:col-2">
+        <button type="submit" pButton pRipple label="Guardar" icon="pi pi-save" class="btn-orange"></button>
+      </div>
+    </p-card>
+
+  </form>
+  </div>
+</div>
+
+
