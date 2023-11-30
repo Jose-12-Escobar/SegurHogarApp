@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 <div class="container">
 
   <div class="p-fluid grid">
     <form [formGroup]="formGroup" (ngSubmit)="guardarDatos()">
 
     <p-card class="col-12">
+=======
+<div class="container-fluid">
+
+  <div class="p-fluid grid">
+    <form class="col-12" [formGroup]="formGroup" (ngSubmit)="guardarDatos()">
+
+    <p-card>
+>>>>>>> main
 
       <div class="grid">
         <div class="lg:col-12">
@@ -55,7 +64,11 @@
     </p-card>
 
     <p-card class="col-12 mt-3">
+<<<<<<< HEAD
       <p class="fs-6 text-uppercase">Datos de contancto</p>
+=======
+      <p class="fs-6 text-uppercase">Datos de contacto</p>
+>>>>>>> main
       <div class="grid">
 
         <div class="col-6 py-4">
@@ -74,6 +87,58 @@
           <small  *ngIf="noEsValido('telefono')">{{ getMensaje('telefono') }}</small>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+    </p-card>
+
+    <p-card class="col-12 mt-3">
+      <p class="fs-6 text-uppercase">Dirección de contacto</p>
+      <div class="grid">
+
+        <div class="lg:col-2 md:col-6 py-4">
+          <span class="p-float-label">
+            <p-dropdown></p-dropdown>
+            <label for="tipoDocumento">Tipo de vía</label>
+          </span>
+        </div>
+
+        <div class="lg:col-2 md:col-6 py-4">
+          <span class="p-float-label">
+            <input pInputText />
+            <label htmlFor="telefono">Dirección</label>
+          </span>
+        </div>
+
+        <div class="lg:col-2 md:col-6 py-4">
+          <span class="p-float-label">
+            <input pInputText pKeyFilter="int" />
+            <label htmlFor="telefono">Número</label>
+          </span>
+        </div>
+
+        <div class="lg:col-2 md:col-6 py-4">
+          <span class="p-float-label">
+            <input pInputText pKeyFilter="int" />
+            <label htmlFor="telefono">Código Postal</label>
+          </span>
+        </div>
+
+        <div class="lg:col-2 md:col-6 py-4">
+          <span class="p-float-label">
+            <p-dropdown></p-dropdown>
+            <label for="tipoDocumento">Localidad</label>
+          </span>
+        </div>
+
+        <div class="lg:col-2 md:col-6 py-4">
+          <span class="p-float-label">
+            <p-dropdown></p-dropdown>
+            <label for="tipoDocumento">Provincia</label>
+          </span>
+        </div>
+
+      </div>
+>>>>>>> main
 
       <div class="md:col-4 lg:col-2">
         <button type="submit" pButton pRipple label="Guardar" icon="pi pi-save" class="btn-orange"></button>

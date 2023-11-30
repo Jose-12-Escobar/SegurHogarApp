@@ -20,13 +20,23 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { DropdownModule } from 'primeng/dropdown';
 import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
+<<<<<<< HEAD
 import {MenuModule} from 'primeng/menu';
 import { PasswordModule } from 'primeng/password';
+=======
+import { MenuModule} from 'primeng/menu';
+import { PasswordModule } from 'primeng/password';
+import { KeyFilterModule } from 'primeng/keyfilter';
+>>>>>>> main
 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { SidbarComponent } from './share/sidbar/sidbar.component';
+=======
+import { SidebarComponent } from './share/sidbar/sidbar.component';
+>>>>>>> main
 import { ModifyClientComponent } from './modules/admin/modify-client/modify-client.component';
 
 @NgModule({
@@ -39,7 +49,11 @@ import { ModifyClientComponent } from './modules/admin/modify-client/modify-clie
     LoginComponent,
     RegisterComponent,
     NuevoClienteComponent,
+<<<<<<< HEAD
     SidbarComponent,
+=======
+    SidebarComponent,
+>>>>>>> main
     ModifyClientComponent
   ],
   imports: [
@@ -57,7 +71,12 @@ import { ModifyClientComponent } from './modules/admin/modify-client/modify-clie
     SidebarModule,
     MenuModule,
     ReactiveFormsModule,
+<<<<<<< HEAD
     PasswordModule
+=======
+    PasswordModule,
+    KeyFilterModule
+>>>>>>> main
   ],
   providers: [],
   bootstrap: [AppComponent]

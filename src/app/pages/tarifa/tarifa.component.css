@@ -46,3 +46,16 @@
   -ms-transform    : translateX(-50%);
   transform        : translateX(-50%);
 }
+<<<<<<< HEAD
+=======
+
+@media (max-width: 992px) {
+
+  .untree_co-section {
+    padding-top: 10rem;
+    padding-bottom: 7rem;
+    position: relative;
+  }
+
+}
+>>>>>>> main

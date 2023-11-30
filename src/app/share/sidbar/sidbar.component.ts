@@ -6,12 +6,20 @@ import { MenuItem } from 'primeng/api';
   templateUrl: './sidbar.component.html',
   styleUrls: ['./sidbar.component.css']
 })
+<<<<<<< HEAD
 export class SidbarComponent implements OnInit, OnDestroy {
 
    items !: MenuItem[] ;
 
    constructor( private renderer : Renderer2 ) {
     this.renderer.addClass(document.body, 'bgBody');
+=======
+export class SidebarComponent implements OnInit, OnDestroy {
+
+   items !: MenuItem[] ;
+
+   constructor( ) {
+>>>>>>> main
    }
 
     ngOnInit() {
@@ -45,7 +53,10 @@ export class SidbarComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
+<<<<<<< HEAD
       this.renderer.removeClass(document.body, 'bgBody');
+=======
+>>>>>>> main
     }
 
 }

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 <div class="container">
 
   <div class="p-fluid grid">
 
     <form class="col-12 mt-3" [formGroup]="formGroupSearch" (submit)="searchClient()">
+=======
+<div class="container-fluid">
+
+  <div class="p-fluid grid">
+
+    <form class="col-12" [formGroup]="formGroupSearch" (submit)="searchClient()">
+>>>>>>> main
       <p-card>
         <p class="fs-4 text-uppercase">Modificar datos <span class="text-orange">de cliente</span> </p>
         <p class="fs-6 text-uppercase">Buscar cliente</p>
@@ -25,8 +33,13 @@
       </p-card>
     </form>
 
+<<<<<<< HEAD
     <form class="col-12" [formGroup]="formGroupClient" (submit)="modifyClient()">
       <p-card class="col-12">
+=======
+    <p-card class="col-12">
+        <form class="col-12" [formGroup]="formGroupClient" (submit)="modifyClient()">
+>>>>>>> main
         <div class="grid">
           <div class="lg:col-12">
             <p class="fs-6 text-uppercase">Datos personales</p>
@@ -78,7 +91,11 @@
           </div>
         </div>
 
+<<<<<<< HEAD
         <p class="fs-6 text-uppercase mt-4">Datos de contancto</p>
+=======
+        <p class="fs-6 text-uppercase mt-4">Datos de contacto</p>
+>>>>>>> main
         <div class="grid">
 
           <div class="col-6 py-4">
@@ -99,12 +116,26 @@
           </div>
         </div>
 
+<<<<<<< HEAD
         <div class="md:col-4 lg:col-2">
           <button type="submit" pButton pRipple label="Guardar" icon="pi pi-save" class="btn-orange"></button>
         </div>
 
       </p-card>
     </form>
+=======
+        <div class="grid py-2">
+          <div class="lg:col-2 md:col-6">
+            <button type="submit" pButton pRipple label="Guardar" icon="pi pi-save" class="btn-orange"></button>
+          </div>
+          <div class="lg:col-2 md:col-6" >
+            <button  pButton pRipple label="Cancelar" icon="pi pi-times" class="btn-orange" (click)="clearForm()"></button>
+          </div>
+        </div>
+
+      </form>
+    </p-card>
+>>>>>>> main
 
   </div>
 </div>
