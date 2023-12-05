@@ -57,8 +57,6 @@ hr.divider {
   color: #ffffff;
 }
 /* aqui acaban los estilos aplicables a la página */
-<<<<<<< HEAD
-=======
 
 @media (max-width: 972px) {
   section.masthead {
@@ -68,4 +66,4 @@ hr.divider {
     padding-bottom: 0;
   }
 }
->>>>>>> main
+

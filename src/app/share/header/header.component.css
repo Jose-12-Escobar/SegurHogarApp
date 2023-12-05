@@ -3,10 +3,7 @@
   background-color: #fff;
   transition: background-color 0.2s ease;
   text-transform: uppercase;
-<<<<<<< HEAD
-=======
   min-height: 80px;
->>>>>>> main
 }
 
 #mainNav .navbar-brand {
@@ -17,11 +14,7 @@
   padding: 1.313rem 0 0 1rem;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-<<<<<<< HEAD
-  color: #6c757d;
-=======
   color: #000000;
->>>>>>> main
   font-weight: 500;
   font-size: 1rem;
   padding: 0.75rem 0;
@@ -69,8 +62,6 @@
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
     color: #f4623a;
   }
-<<<<<<< HEAD
-=======
 
   #menuHeader {
     display: none;
@@ -91,5 +82,5 @@
     text-align: center;
   }
 
->>>>>>> main
+
 }

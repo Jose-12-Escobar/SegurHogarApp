@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { HeaderService } from 'src/app/Services/header.service';
-<<<<<<< HEAD
-=======
 import { SidebarService } from 'src/app/Services/sidebar.service';
->>>>>>> main
+
 
 @Component({
   selector: 'app-header',
@@ -15,14 +13,9 @@ export class HeaderComponent implements OnInit {
 
   scroll!: boolean;
   show:boolean = false;
-<<<<<<< HEAD
-
-  constructor( private _showHD: HeaderService, private router: Router ) {
-=======
   inAdmin : boolean = false;
 
   constructor( private _showHD: HeaderService, private _router: Router, public _showSB: SidebarService) {
->>>>>>> main
     this._showHD.showHeader.subscribe( res => { this.scroll = res});
   }
 
@@ -31,17 +24,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-<<<<<<< HEAD
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        if (this.router.url != "/home") {
-          this._showHD.changeShowSidebar(true)
-        }else{
-          this._showHD.changeShowSidebar(false);
-        }
-      }
-    })
-=======
     this._router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         const splitPath = this._router.url.split('/');
@@ -62,6 +44,5 @@ export class HeaderComponent implements OnInit {
 
   hiddenSidebar() {
     this._showSB.changeShowSidebar(!this._showSB.showSidebar.value);
->>>>>>> main
   }
 }

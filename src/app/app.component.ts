@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import { Component, OnInit } from '@angular/core';
-import { SidebarService } from './Services/sidebar.service';
-import { Client } from './modules/admin/models/client-model';
-=======
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { SidebarService } from './Services/sidebar.service';
 import { Client } from './modules/admin/models/client-model';
 import { NavigationEnd, Router } from '@angular/router';
->>>>>>> main
 
 
 @Component({
@@ -19,10 +13,8 @@ export class AppComponent implements OnInit {
 
   title = 'SegurHogar';
   public show !: boolean;
-<<<<<<< HEAD
-=======
   inAdmin : boolean = false;
->>>>>>> main
+
 
   cliente : Client[] =   [
     {
@@ -190,19 +182,13 @@ export class AppComponent implements OnInit {
   ]
 
 
-<<<<<<< HEAD
-  constructor( public _show: SidebarService){
-=======
-
    constructor( public _show: SidebarService, private _router: Router, private renderer : Renderer2  ){
->>>>>>> main
+
     this._show.showSidebar.subscribe(res => { this.show = res});
    }
 
   ngOnInit(): void {
-<<<<<<< HEAD
-    localStorage.setItem('clientes', JSON.stringify(this.cliente))
-=======
+
     localStorage.setItem('clientes', JSON.stringify(this.cliente));
 
     this._router.events.subscribe(event => {
@@ -218,7 +204,7 @@ export class AppComponent implements OnInit {
         }
       }
     })
->>>>>>> main
+
   }
 
 }

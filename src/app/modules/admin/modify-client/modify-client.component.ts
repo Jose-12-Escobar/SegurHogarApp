@@ -39,14 +39,10 @@ export class ModifyClientComponent implements OnInit {
     if (this.codCliente) {
       this.cliente = this._localStorageService.getItemId(this.codCliente)
       this.formGroupClient.enable();
-<<<<<<< HEAD
-      this.showClientInformation(this.cliente)
-=======
       this.formGroupSearch.disable();
       this.showClientInformation(this.cliente)
     }else{
       this.formGroupSearch.enable();
->>>>>>> main
     }
   }
 
@@ -125,14 +121,9 @@ export class ModifyClientComponent implements OnInit {
   }
 
   updateLabelDocument(): void {
-<<<<<<< HEAD
-    this.documentLabel = this.formGroupClient.get('tipo_documento')?.value.name;
-    console.log(this.documentLabel);
 
-
-=======
     this.documentLabel = this.formGroupClient.get('tipo_documento')?.value?.name;
->>>>>>> main
+
   }
 
   modifyClient() {
@@ -141,8 +132,6 @@ export class ModifyClientComponent implements OnInit {
     }
   }
 
-<<<<<<< HEAD
-=======
   clearForm(){
     this.formGroupClient.reset();
     this.formGroupClient.disable();
@@ -150,5 +139,4 @@ export class ModifyClientComponent implements OnInit {
     this.formGroupSearch.enable();
   }
 
->>>>>>> main
 }

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<div class="container">
-=======
 <div class="container-fluid">
->>>>>>> main
+
   <div class="p-fluid grid">
     <p-card class="col-12">
       <div class="lg:col-12">
@@ -25,22 +22,22 @@
             <th>
               <input class="p-inputtext w-75" pInputText type="text"
                 (input)="dc.filter($any($event.target)?.value, 'documento', 'contains')"
-                [value]="$any(dc.filters['documento'])?.value" >
+                [value]="$any(dc.filters['documento'])?.value">
             </th>
             <th>
               <input class="p-inputtext w-75" pInputText type="text"
                 (input)="dc.filter($any($event.target)?.value, 'nombre', 'contains')"
-                [value]="$any(dc.filters['nombre'])?.value" >
+                [value]="$any(dc.filters['nombre'])?.value">
             </th>
             <th>
               <input class="p-inputtext w-75" pInputText type="text"
                 (input)="dc.filter($any($event.target)?.value, 'apellidos', 'contains')"
-                [value]="$any(dc.filters['apellidos'])?.value" >
+                [value]="$any(dc.filters['apellidos'])?.value">
             </th>
             <th>
               <input class="p-inputtext w-75" pInputText type="text"
                 (input)="dc.filter($any($event.target)?.value, 'telefono', 'contains')"
-                [value]="$any(dc.filters['telefono'])?.value" >
+                [value]="$any(dc.filters['telefono'])?.value">
             </th>
             <th></th>
             <th></th>
@@ -52,18 +49,15 @@
             <td style="text-align: center;">{{ cliente.nombre }}</td>
             <td style="text-align: center;">{{ cliente.apellidos }}</td>
             <td style="text-align: center;">{{ cliente.telefono }}</td>
-            <td style="text-align: right;" routerLink="/admin/modifyClient" (click)="editClient(cliente.documento)"><span class="pi pi-pencil" style="color: blue"></span></td>
-            <td style="text-align: right;"><span class="pi pi-trash" style="color: red"></span></td>
-
+            <td style="text-align: right;" routerLink="/admin/modifyClient" (click)="editClient(cliente.documento)">
+              <span class="pi pi-pencil" pTooltip="Editar datos del cliente" tooltipPosition="left"
+                style="color: blue"></span>
+            </td>
+            <td style="text-align: right;"><span class="pi pi-trash" pTooltip="Eliminar cliente"
+                tooltipPosition="left" style="color: red"></span></td>
           </tr>
         </ng-template>
       </p-table>
     </p-card>
   </div>
 </div>
-
-
-
-<!-- <div class="card">
-
-</div> -->

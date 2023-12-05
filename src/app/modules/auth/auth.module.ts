@@ -2,18 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
-<<<<<<< HEAD
-
-/* Importaciones PrimeNG */
-import { PasswordModule } from 'primeng/password';
-
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    AuthRoutingModule,
-    PasswordModule
-=======
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
@@ -32,7 +20,6 @@ import { ButtonModule } from 'primeng/button';
     PasswordModule,
     InputTextModule,
     ButtonModule
->>>>>>> main
   ]
 })
 export class AuthModule { }

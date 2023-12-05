@@ -53,11 +53,9 @@
                     <div class="col-sm-6">
                       <span class="p-float-label">
                         <input pInputText type="password" formControlName="confirmPassword" id="passConfirm" class="form-control-user" />
-<<<<<<< HEAD
-                        <label htmlFor="passConfirm">Confirmar contraseña</label>
-=======
+
                         <label htmlFor="passConfirm">Repetir contraseña</label>
->>>>>>> main
+
                       </span>
                       <small *ngIf="noEsValido('confirmPassword')">{{ getMensaje('confirmPassword') }}</small>
                     </div>
@@ -74,17 +72,12 @@
                 </form>
                 <hr>
                 <div class="text-center">
-<<<<<<< HEAD
-                  <a class="small" href="forgot-password.html">¿Has olvidado tu contraseña?</a>
-                </div>
-                <div class="text-center">
-                  <a class="small" routerLink="/login">¿Ya tienes una cuenta? Iniciar sesión!</a>
-=======
+
                   <a routerLink="/auth/forgotPass" class="small">¿Has olvidado tu contraseña?</a>
                 </div>
                 <div class="text-center">
                   <a class="small" routerLink="/auth/login">¿Ya tienes una cuenta? Iniciar sesión!</a>
->>>>>>> main
+
                 </div>
               </div>
             </div>

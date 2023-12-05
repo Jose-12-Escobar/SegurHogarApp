@@ -9,11 +9,7 @@
             <div class="col-lg-6">
               <div class="p-5">
                 <div class="text-center">
-<<<<<<< HEAD
-                  <h4 class=" text-dark mb-4">Iniciar sessión!</h4>
-=======
                   <h4 class=" text-dark mb-4">Iniciar sesión!</h4>
->>>>>>> main
                 </div>
                 <form class="user" [formGroup]="formGroupLogin" (submit)="login()">
                   <div class=" mb-5">
@@ -26,11 +22,9 @@
                   <div class="">
                     <span class="p-float-label">
                       <input pInputText type="password" id="pass" formControlName="password" class="form-control-user" />
-<<<<<<< HEAD
-                      <label htmlFor="pass">Contrseña</label>
-=======
+
                       <label htmlFor="pass">Contraseña</label>
->>>>>>> main
+
                     </span>
                     <small *ngIf="noEsValido('password')">{{ getMensaje('password') }}</small>
                   </div>
@@ -47,17 +41,12 @@
                 </form>
                 <hr>
                 <div class="text-center">
-<<<<<<< HEAD
-                  <a class="small" href="forgot-password.html">¿Has olvidado tu contraseña?</a>
-                </div>
-                <div class="text-center">
-                  <a class="small" href="register.html">Registrate</a>
-=======
+
                   <a routerLink="/auth/forgotPass" class="small">¿Has olvidado tu contraseña?</a>
                 </div>
                 <div class="text-center">
                   <a routerLink="/auth/register" class="small">Registrate</a>
->>>>>>> main
+
                 </div>
               </div>
             </div>

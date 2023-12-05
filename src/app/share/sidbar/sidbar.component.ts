@@ -6,20 +6,13 @@ import { MenuItem } from 'primeng/api';
   templateUrl: './sidbar.component.html',
   styleUrls: ['./sidbar.component.css']
 })
-<<<<<<< HEAD
-export class SidbarComponent implements OnInit, OnDestroy {
 
-   items !: MenuItem[] ;
-
-   constructor( private renderer : Renderer2 ) {
-    this.renderer.addClass(document.body, 'bgBody');
-=======
 export class SidebarComponent implements OnInit, OnDestroy {
 
    items !: MenuItem[] ;
 
    constructor( ) {
->>>>>>> main
+
    }
 
     ngOnInit() {
@@ -36,7 +29,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
             {
                 label: 'Siniestros',
                 items: [
-                    { label: 'Option1', icon: 'pi pi-times' },
+                    { label: 'Nuevo', icon: 'pi pi-exclamation-triangle', routerLink: '/admin/newSinister' },
                     { label: 'Option2', icon: 'pi pi-times', },
                     { label: 'Option3', icon: 'pi pi-times', }
                 ]
@@ -53,10 +46,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
-<<<<<<< HEAD
-      this.renderer.removeClass(document.body, 'bgBody');
-=======
->>>>>>> main
     }
 
 }

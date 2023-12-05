@@ -10,7 +10,8 @@ import { SidebarService } from 'src/app/Services/sidebar.service';
 export class NuevoClienteComponent implements OnInit{
 
   formGroup !: FormGroup;
-  tiposDocumentos !: {name: string; code: string;}[];
+  tiposDocumentos !: {name: string}[];
+  tiposVias !: {name: string}[];
   documentLabel : string = "Seleccione tipo de documento";
 
   constructor( public _show: SidebarService, private fb : FormBuilder){
@@ -22,9 +23,15 @@ export class NuevoClienteComponent implements OnInit{
       this.initFormNewClient();
       this.formGroup.get('documento')?.disable();
       this.tiposDocumentos = [
-        { name: 'DNI', code: 'dni' },
-        { name: 'NIE', code: 'nie' }
+        { name: 'DNI'},
+        { name: 'NIE'}
     ];
+      this.tiposVias = [
+        { name: 'Calle'},
+        { name: 'Avenida'},
+        { name: 'Carretera'},
+        { name: 'Otros'}
+      ]
   }
 
   initFormNewClient() {
@@ -35,7 +42,13 @@ export class NuevoClienteComponent implements OnInit{
       tipo_documento: [null, [Validators.required]],
       documento: [null, [Validators.required]],
       mail: [null, [Validators.required, Validators.pattern("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")]],
-      telefono: [null, [Validators.required, Validators.minLength(9), Validators.maxLength(20)]]
+      telefono: [null, [Validators.required, Validators.minLength(9), Validators.maxLength(20)]],
+      tipo_via: [null, [Validators.required]],
+      direccion: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
+      numero: [null, [Validators.required]],
+      codigoPostal: [null, [Validators.required]],
+      localidad: [null, [Validators.required]],
+      provincia: [null, [Validators.required]],
     });
 
   }
@@ -54,6 +67,7 @@ export class NuevoClienteComponent implements OnInit{
     else if(error?.['minlength']){
       msg= {
         nombre:"El mínimo de caracteres válido es 3",
+        direccion:"El mínimo de caracteres válido es 3",
         apellidos:"El mínimo de caracteres válido es 10",
         telefono:"El mínimo de caracteres válido es 9"
         }[campo]|| '';
@@ -77,6 +91,11 @@ export class NuevoClienteComponent implements OnInit{
     if (this.formGroup.invalid) {
           this.formGroup.markAllAsTouched();
         }
+}
+
+clearForm( ){
+  this.formGroup.reset();
+
 }
 }
 

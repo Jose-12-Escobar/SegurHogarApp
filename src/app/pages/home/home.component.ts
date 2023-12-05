@@ -18,15 +18,9 @@ export class HomeComponent {
   scrollYes(): void {
 
     if( window.scrollY === 0){
-<<<<<<< HEAD
-      this._showHD.changeShowSidebar(false)
-    }else{
-      this._showHD.changeShowSidebar(true)
-=======
       this._showHD.changeShowHeader(false)
     }else{
       this._showHD.changeShowHeader(true)
->>>>>>> main
     }
   }
 
